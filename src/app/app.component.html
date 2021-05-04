@@ -1,0 +1,78 @@
+<mat-toolbar class="header">
+  <button
+    routerLink="/home"
+    mat-fab
+    color="primary"
+    aria-label="Example icon button with a home icon"
+  >
+    <mat-icon>home</mat-icon>
+  </button>
+  <div>
+    <button
+      routerLink="/home"
+      class="routes"
+      mat-stroked-button
+      color="primary"
+    >
+      Acceuil
+    </button>
+    <button
+      *ngIf="!cookieService.check('expert') && !cookieService.check('admin')"
+      routerLink="/signup"
+      class="routes"
+      mat-stroked-button
+      color="primary"
+    >
+      S'inscrire
+    </button>
+    <button
+      *ngIf="!cookieService.check('expert') && !cookieService.check('admin')"
+      routerLink="/login"
+      class="routes"
+      mat-stroked-button
+      color="primary"
+    >
+      Connexion
+    </button>
+    <button
+      *ngIf="cookieService.check('admin')"
+      routerLink="/projet"
+      class="routes"
+      mat-stroked-button
+      color="primary"
+    >
+      Projet
+    </button>
+    <button
+      color="accent"
+      *ngIf="cookieService.check('expert')"
+      routerLink="/questions"
+      class="routes"
+      mat-stroked-button
+      color="primary"
+    >
+      Questions
+    </button>
+    <button
+      *ngIf="cookieService.check('admin')"
+      routerLink="/create-projet"
+      class="routes"
+      mat-stroked-button
+      color="primary"
+    >
+      Créer un projet
+    </button>
+    <button
+      (click)="logout()"
+      *ngIf="cookieService.check('admin') || cookieService.check('expert')"
+      routerLink="/login"
+      class="routes"
+      mat-stroked-button
+      color="primary"
+    >
+      Se déconnecter
+    </button>
+  </div>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
