@@ -27,6 +27,8 @@ import { AnsweredComponent } from './answered/answered.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { HomeComponent } from './home/home.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +60,10 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatSelectModule,
     MatDividerModule,
     MatExpansionModule,
+    MatTableModule,
+    BrowserModule,
+    MatTableModule,
+    MatSortModule,
   ],
 
   providers: [CookieService],

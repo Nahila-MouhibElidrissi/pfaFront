@@ -33,4 +33,10 @@ export class ProjetService {
       `https://pfaback.herokuapp.com/api/admin/projets/${expertName}`
     );
   }
+
+  findAnswers(expertName: string | undefined) {
+    return this.httpClient.get(
+      `https://pfaback.herokuapp.com/api/projet/answers/${expertName}`
+    );
+  }
 }

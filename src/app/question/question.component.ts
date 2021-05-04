@@ -94,7 +94,7 @@ export class QuestionComponent implements OnInit {
 
     for (let index = 0; index < this.ate.length; index++) {
       const element = this.questionForm.value[keys[index]];
-      results = results + ',' + element;
+      results = results + element + ',';
     }
     let expert: Expert = JSON.parse(this.cookieService.get('expert'));
     expert.answers = results;
