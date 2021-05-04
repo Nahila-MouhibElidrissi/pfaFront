@@ -13,24 +13,24 @@ export class ProjetService {
 
   createProjet(projetPayload: ProjetPayload) {
     return this.httpClient.post(
-      'http://localhost:8090/api/projet/create/',
+      'https://pfaback.herokuapp.com/api/projet/create/',
       projetPayload
     );
   }
   getCriteres(projetName: string) {
     return this.httpClient.get(
-      `http://localhost:8090/api/projet/email/${projetName}`
+      `https://pfaback.herokuapp.com/api/projet/email/${projetName}`
     );
   }
   answerQst(expert: Expert) {
     return this.httpClient.put(
-      'http://localhost:8090/api/expert/answer/',
+      'https://pfaback.herokuapp.com/api/expert/answer/',
       expert
     );
   }
   getProjets(expertName: string): Observable<Projet[]> {
     return this.httpClient.get<Projet[]>(
-      `http://localhost:8090/api/admin/projets/${expertName}`
+      `https://pfaback.herokuapp.com/api/admin/projets/${expertName}`
     );
   }
 }
