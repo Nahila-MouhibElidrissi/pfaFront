@@ -6,7 +6,7 @@ const app = express();
 app.use(express.static(__dirname + "/dist/<FOLDER_NAME>"));
 
 app.get("/*", (req, res, next) => {
-  res.sendFile(path.join(__dirname + "/dist/dictionary/index.html"));
+  res.sendFile(path.join(__dirname + "/dist/pfaFront"));
 });
 
 app.listen(process.env.PORT || 8000);
