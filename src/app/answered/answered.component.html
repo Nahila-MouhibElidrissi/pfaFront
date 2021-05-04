@@ -1,22 +1,29 @@
 <mat-card class="example-card">
   <mat-card-header style="text-align: center; margin: auto; display: block">
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-title>Vos réponses sont envoyées</mat-card-title>
+    <mat-card-subtitle>Merci pour votre avis</mat-card-subtitle>
   </mat-card-header>
-  <img
-    mat-card-image
-    src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-    alt="Photo of a Shiba Inu"
-  />
+  <div class="crop">
+    <img
+      mat-card-image
+      src="https://images.unsplash.com/photo-1587047529377-a409aeb98f54?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
+      alt="Photo of a Shiba Inu"
+    />
+  </div>
   <mat-card-content>
     <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz
-      breeds of dog from Japan. A small, agile dog that copes very well with
-      mountainous terrain, the Shiba Inu was originally bred for hunting.
+      Vos données seront traitées dans notre serveur, si vous souhaitez créer
+      votre propre projet, vous pouvez vous inscrire pour un compte
+      administrateur ou vous pouvez vous connecter si vous avez un autre projet
+      à répondre.
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="primary">Create admin account</button>
-    <button mat-raised-button color="accent">Login</button>
+    <button mat-raised-button routerLink="/signup" color="primary">
+      Créer un compte administrateur
+    </button>
+    <button mat-raised-button routerLink="/login" color="accent">
+      Connexion
+    </button>
   </mat-card-actions>
 </mat-card>
