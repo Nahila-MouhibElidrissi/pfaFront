@@ -20,6 +20,7 @@ export class ProjetComponent implements AfterViewInit {
   dataSource: any[];
   sortedByBrand: Response[];
   tempVal: any;
+  k = 0;
   @ViewChild(MatSort) sort: MatSort;
 
   ngAfterViewInit() {
@@ -52,6 +53,8 @@ export class ProjetComponent implements AfterViewInit {
           this.ate.push(proj);
           this.projetService.findAnswers(proj.projetName).subscribe(
             (data) => {
+              this.k = 0;
+              this.res = [];
               let i = 0;
               let temp: Response;
               for (const [key, value] of Object.entries(data)) {
