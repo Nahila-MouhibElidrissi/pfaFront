@@ -25,15 +25,15 @@ export class QuestionComponent implements OnInit {
   ate: any[];
 
   animals: question[] = [
-    { name: "D'importance égale", val: 1 },
-    { name: 'Un peu plus important', val: 2 },
-    { name: 'Modérément plus important', val: 3 },
-    { name: 'En plus Modérément plus important', val: 4 },
-    { name: 'Stronggly plus importante', val: 5 },
-    { name: 'De plus fortement plus important', val: 6 },
-    { name: 'Très fortement plus important', val: 7 },
-    { name: 'Peu extrêmement plus important', val: 8 },
-    { name: 'Extrêmement plus important', val: 9 },
+    { name: "D'importance égale", val: '1,1,1' },
+    { name: 'Un peu plus important', val: '1,2,3' },
+    { name: 'Modérément plus important', val: '2,3,4' },
+    { name: 'En plus Modérément plus important', val: '3,4,5' },
+    { name: 'Stronggly plus importante', val: '4,5,6' },
+    { name: 'De plus fortement plus important', val: '5,6,7' },
+    { name: 'Très fortement plus important', val: '6,7,8' },
+    { name: 'Peu extrêmement plus important', val: '7,8,9' },
+    { name: 'Extrêmement plus important', val: '8,9,10' },
   ];
   array = ['apple', 'banana', 'lemon', 'mango'];
   constructor(
@@ -94,7 +94,7 @@ export class QuestionComponent implements OnInit {
 
     for (let index = 0; index < this.ate.length; index++) {
       const element = this.questionForm.value[keys[index]];
-      results = results + element + ',';
+      results = results + element + ';';
     }
     let expert: Expert = JSON.parse(this.cookieService.get('expert'));
     expert.answers = results;
@@ -112,5 +112,5 @@ export class QuestionComponent implements OnInit {
 }
 interface question {
   name: string;
-  val: number;
+  val: string;
 }
