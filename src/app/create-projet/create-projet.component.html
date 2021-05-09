@@ -10,7 +10,7 @@
           <mat-label>Nom du projet</mat-label>
           <input
             matInput
-            placeholder="Last name, First name"
+            placeholder="Nom du projet"
             formControlName="name"
             required
           />
@@ -21,7 +21,7 @@
             <textarea
               formControlName="description"
               matInput
-              placeholder="Ex. 100 Main St"
+              placeholder="Description"
               required
             ></textarea>
           </mat-form-field>
@@ -29,7 +29,7 @@
             <mat-label>Critères</mat-label>
             <mat-chip-list
               #chipList
-              aria-label="Fruit selection"
+              aria-label="Critères"
               formControlName="fruits"
             >
               <mat-chip
@@ -42,7 +42,7 @@
                 <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
               </mat-chip>
               <input
-                placeholder="New fruit..."
+                placeholder="Critères..."
                 [matChipInputFor]="chipList"
                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
                 [matChipInputAddOnBlur]="addOnBlur"
@@ -105,7 +105,7 @@
                 required
               />
             </mat-form-field>
-            <button
+            <!-- <button
               (click)="deleteFieldValue(i)"
               mat-icon-button
               color="primary"
@@ -115,7 +115,7 @@
               <mat-icon aria-hidden="false" aria-label="Example add icon">
                 delete
               </mat-icon>
-            </button>
+            </button> -->
           </div>
         </ng-container>
         <button
