@@ -11,19 +11,19 @@ export class RegisterService {
 
   loginAdmin(loginPayload: Admin) {
     return this.httpClient.post(
-      'https://pfaback.herokuapp.com/api/admin/login/',
+      'http://localhost:8090/api/admin/login/',
       loginPayload
     );
   }
   loginExpert(loginPayload: Expert) {
     return this.httpClient.post(
-      'https://pfaback.herokuapp.com/api/expert/login/',
+      'http://localhost:8090/api/expert/login/',
       loginPayload
     );
   }
   signupAdmin(loginPayload: Admin) {
     return this.httpClient.post(
-      'https://pfaback.herokuapp.com/api/admin/register/',
+      'http://localhost:8090/api/admin/register/',
       loginPayload
     );
   }
